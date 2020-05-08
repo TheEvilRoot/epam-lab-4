@@ -93,13 +93,8 @@ public class GUI extends Application implements Observer<Double> {
     private void initModel() {
         calculateButton.setOnMouseClicked(e -> {
             if (updateFunction()) {
-                try {
-                    setControls(true);
-                    integral.startCalculation();
-                } catch (InterruptedException ex) {
-                    ex.printStackTrace();
-                    setControls(false);
-                }
+                setControls(true);
+                integral.startCalculation();
             }
         });
     }
