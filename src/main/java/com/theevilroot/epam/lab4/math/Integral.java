@@ -26,7 +26,7 @@ public class Integral {
         this.dx = dx;
     }
 
-    public void startCalculation() throws InterruptedException {
+    public void startCalculation() {
         int count = Math.toIntExact(Math.round(Math.ceil((function.getToX() - function.getFromX()) / dx)));
         latch = new CountDownLatch(count);
 
